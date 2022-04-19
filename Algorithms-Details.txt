@@ -1,0 +1,115 @@
+                 // Adaptive : means to reduce the numbers of steps if there is some elements already sorted
+
+ 	       // NOTE THAT 
+		   
+		    1) While sorting if the source list has some elements already sorted
+			   the adaptive algorithm will take it into account and will try not to re-order them
+
+		    2) While sorting if the source list has some elements already sorted
+			   the non_adaptive algorithm will  not take it into account and will try to force
+			   every single elemnent to be orderd
+
+	/////// Adaptive sorting algorithms /////////////
+
+                            1.Bubble Sort
+                            2.Insertion Sort
+                            3.Quick Sort
+ 
+       ///////////// Non-adaptive sorting algorithms: //////////////
+
+                          1.Selection Sort
+                          2.Merge Sort
+                          3.Heap Sort
+		   
+
+
+           
+	                                    **********Bubble Sort********* 
+	     Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping 
+	     the adjacent elements if they are in wrong order.
+	     Worst and Average Case Time Complexity: O(n^2).
+		 Worst case occurs when array is reverse sorted.
+         Best Case Time Complexity: O(n). Best case occurs when array is already sorted.
+         Auxiliary Space: O(1)
+         Boundary Cases: Bubble sort takes minimum time (Order of n) when elements are already sorted.
+         Sorting In Place: Yes
+         Stable: Yes
+		 adaptive: Yes => As, it doesnt make any swap move if the  two elements are sorted.
+         Due to its simplicity, bubble sort is often used to introduce the concept of a sorting algorithm. 
+         In computer graphics it is popular for its capability to detect a very small error.
+		 this algorithm will not suitable for large data.
+	 
+
+
+	 
+							  **********Insertion Sort**********
+         Insertion sort is a simple sorting algorithm that works similar to the way you 
+		 sort playing cards in your hands. The array is virtually split into a sorted 
+		 and an unsorted part. 
+		 Values from the unsorted part are picked and placed at the correct position 
+		 in the sorted part.
+		 Time Complexity: O(n^2)
+         Auxiliary Space: O(1)
+         Boundary Cases: Insertion sort takes maximum time to sort if elements are sorted in reverse order.
+         And it takes minimum time (Order of n) when elements are already sorted.
+		 Algorithmic Paradigm: Incremental Approach
+         Sorting In Place: Yes
+         Stable: Yes
+         Online: Yes
+		 Adaptive:Insertion Sort is adaptive, that means it reduces its total
+		 number of steps if given a partially sorted list
+         Uses: Insertion sort is used when number of elements is small.
+		 It can also be useful when input array is almost sorted,
+         only few elements are misplaced in complete big array.
+		 this algorithm will not suitable for large data.
+     
+
+   
+                             **********Selection Sort**********
+       Time Complexity: O(n2) as there are two nested loops. in all cases
+       Auxiliary Space: O(1) 
+       The good thing about selection sort is it never makes more than O(n) 
+       swaps and can be useful when memory write is a costly operation. 
+	   In Place : Yes, it does not require extra space.
+
+	   // The default implementation is not stable.
+	   However it can be made stable. Please see stable selection sort for details.
+
+   
+   
+                                     ************Merge Sort***************
+        heap sort == merge sort in all cases and space
+	   Merge Sort is a recursive algorithm and time complexity can be expressed as 
+	   following recurrence relation.   T(n) = 2T(n/2) + θ(n).
+	   time complexity of Merge Sort is  θ(nLogn) in all 3 cases (worst, average and best) 
+	   as merge sort always divides the array into two halves and takes linear time to
+	   Auxiliary Space: O(n)
+	   Algorithmic Paradigm: Divide and Conquer
+	   Sorting In Place: No in a typical implementation
+       Stable: Yes
+	   Slower comparative to the other sort algorithms for smaller tasks.
+       is non adaptive          
+
+    
+                                    ************Quick Sort********************
+     
+        Solution of above recurrence is also O(nLogn) in best and worth
+        Although the worst case time complexity of QuickSort is O(n2)
+		which is more than many other sorting algorithms like Merge Sort and Heap Sort
+	    QuickSort is faster in practice, because its inner loop can be efficiently implemented on most 
+	    architectures, and in most real-world data. QuickSort can be implemented in different ways by changing 
+	    the choice of pivot, so that the worst case rarely occurs for a given type of data
+	   However, merge sort is generally considered better when data is huge and stored in external storage. 
+
+   Is QuickSort stable? 
+   The default implementation is not stable. 
+   However any sorting algorithm can be made stable by considering indexes as comparison parameter. 
+
+  Is QuickSort In-place? 
+   As per the broad definition of in-place algorithm it qualifies as an in-place sorting algorithm as it
+   uses extra space only for storing recursive function calls 
+   but not for manipulating the input. 
+
+
+
+ 
